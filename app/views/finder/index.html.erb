@@ -1,7 +1,8 @@
-<h2>All Customers</h2>
+<h2><%= @page_title%></h2>
+<% if @customers.size.zero? %>
+<p> No Customers Found </p>
+<%else%>
 <%= render @customers%>
+<%end%>
 
 
-<%= render partial: 'customers/customer',
-					collection: @customers,
-					as: 'customer'%>
