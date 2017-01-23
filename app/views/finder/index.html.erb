@@ -1,1 +1,7 @@
-<h1>It Worked</h1>
+<h2>All Customers</h2>
+<%= render @customers%>
+
+
+<%= render partial: 'customers/customer',
+					collection: @customers,
+					as: 'customer'%>
